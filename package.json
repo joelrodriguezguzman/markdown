@@ -1,6 +1,6 @@
 {
-  "name": "markdown",
-  "displayName": "MarkDown",
+  "name": "markdown-view",
+  "displayName": "MarkDown Editor",
   "description": "MD Editor",
   "publisher": "joelrodriguezguzman",
   "license": "AGPL-3.0",
