@@ -2,6 +2,8 @@
   "name": "markdown",
   "displayName": "MarkDown",
   "description": "MD Editor",
+  "publisher": "joelrodriguezguzman",
+  "license": "AGPL-3.0",
   "version": "1.0.0",
   "icon": "images/logo128.png",
   "engines": {
