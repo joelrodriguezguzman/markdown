@@ -6,13 +6,13 @@ import { getMarkdownEditorVars } from './theme';
 
 export function activate(context: vscode.ExtensionContext) {
   const treeProvider = new MarkdownTreeProvider();
-  vscode.window.registerTreeDataProvider('markdown', treeProvider);
+  vscode.window.registerTreeDataProvider('markdown-view', treeProvider);
 
   vscode.commands.registerCommand('markdownView.openMarkdownFile', (resource: vscode.Uri) => {
     const data = fs.readFileSync(resource.fsPath, 'utf-8');
     const panel = vscode.window.createWebviewPanel(
-      'markdown',
-      `Markdown: ${path.basename(resource.fsPath)}`,
+      'markdown-view',
+      `MarkDown View: ${path.basename(resource.fsPath)}`,
       vscode.ViewColumn.One,
       {
         enableScripts: true
@@ -56,7 +56,7 @@ function getMarkdownEditorHtml(data: string, theme: string, cssUri: string): str
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Markdown</title>
+      <title>MarkDown View</title>
       <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
       <style>
@@ -189,8 +189,8 @@ class MarkdownTreeProvider implements vscode.TreeDataProvider<vscode.TreeItem> {
             const fullPath = path.join(folder, file);
             const item = new vscode.TreeItem(path.relative(rootFolder, fullPath), vscode.TreeItemCollapsibleState.None);
             item.command = {
-              command: 'markdown.openFile',
-              title: 'Open Markdown',
+              command: 'markdownView.openMarkdownFile',
+              title: 'Open MarkDown View',
               arguments: [vscode.Uri.file(fullPath)]
             };
             item.iconPath = new vscode.ThemeIcon('book');

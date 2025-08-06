@@ -1,10 +1,10 @@
 {
   "name": "markdown-view",
   "displayName": "MarkDown View",
-  "description": "MD Editor",
+  "description": "A modern Markdown editor and viewer for VS Code.",
   "publisher": "joelrodriguezguzman",
   "license": "AGPL-3.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "images/logo128.png",
   "engines": {
     "vscode": "^1.102.0"
@@ -17,26 +17,40 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "viewsContainers": {
         "activitybar": [
         {
-            "id": "markdown",
-            "title": "MD",
+            "id": "markdown-view",
+            "title": "MarkDown View",
             "icon": "images/logo128.png"
         }
         ]
     },
     "views": {
-        "markdown": [
+        "markdown-view": [
         {
-            "id": "markdown",
-            "name": "Markdown",
+            "id": "markdown-view",
+            "name": "MarkDown View",
             "icon": "images/logo128.png"
         }
         ]
+    },
+    "commands": [
+      {
+        "command": "markdownView.openMarkdownFile",
+        "title": "Open Markdown File"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "markdownView.openMarkdownFile",
+          "when": "resourceExtname == .md",
+          "group": "navigation"
+        }
+      ]
     }
   },
 

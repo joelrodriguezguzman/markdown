@@ -1,6 +1,6 @@
-# markdown
+# MarkDown View
 
-`markdown` is a VS Code extension designed to provide an intuitive Markdown editing experience. It features a custom sidebar for navigating `.md` files and a modern Markdown editor powered by EasyMDE (built on CodeMirror). The extension supports live preview, formatting, and Mermaid diagrams, making it easy to edit and visualize Markdown content directly in VS Code.
+`markdown-view` is a VS Code extension designed to provide an intuitive Markdown editing experience. It features a custom sidebar for navigating `.md` files and a modern Markdown editor powered by EasyMDE (built on CodeMirror). The extension supports live preview, formatting, and Mermaid diagrams, making it easy to edit and visualize Markdown content directly in VS Code.
 
 ## Features
 
@@ -12,9 +12,9 @@
 - ✅ Built using VS Code Webview API, TypeScript, and EasyMDE/CodeMirror.
 
 
-![Mardown Demo](https://github.com/joelrodriguezguzman/markdown/blob/main/images/markdown.gif?raw=true)
+![MarkDown View Demo](https://github.com/joelrodriguezguzman/markdown/blob/main/images/markdown.gif?raw=true)
 
-> 🎥 This GIF shows the Markdown extension in action — editing, previewing, and rendering Mermaid diagrams with EasyMDE.
+> 🎥 This GIF shows the MarkDown View extension in action — editing, previewing, and rendering Mermaid diagrams with EasyMDE.
 
 ## Requirements
 
@@ -47,7 +47,7 @@ We follow VS Code's official extension development guidelines to ensure compatib
 
 * [VS Code Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
-## Working with Markdown
+## Working with MarkDown View
 
 You can author your README using Visual Studio Code. Useful shortcuts:
 
@@ -56,9 +56,9 @@ You can author your README using Visual Studio Code. Useful shortcuts:
 * Auto-complete Markdown snippets: `Ctrl+Space`
 
 📘 Usage
-To edit a Markdown file using this extension:
+To edit a Markdown file using MarkDown View:
 
-Follow the Markdown GIF usage example for a visual walkthrough.
+Follow the MarkDown View GIF usage example for a visual walkthrough.
 
 Open any .md file listed by the extension.
 
@@ -71,7 +71,7 @@ Click the 👁️ Eye icon to preview the rendered Markdown.
 🗂️ Managing Which Markdown Files Are Shown
 By default, the extension lists all .md files located in the root directory of your project.
 
-If you want the extension to include Markdown files from additional folders:
+If you want MarkDown View to include Markdown files from additional folders:
 
 Create a file named md_paths (without any file extension) inside your project's .vscode folder.
 
